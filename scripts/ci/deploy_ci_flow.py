@@ -182,7 +182,6 @@ def deploy(flow_path, config_path, runtime_url, pat):
         provider_context_names.extend(auto_names)
 
     if provider_context_names:
-        import re
         pattern = config.get("provided_parameter_contexts")
         if pattern:
             filtered = [n for n in provider_context_names if re.fullmatch(pattern, n)]
